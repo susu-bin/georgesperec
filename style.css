@@ -1,0 +1,395 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+	font-family: 'Fira Code', monospace, "Noto Sans KR", sans-serif, serif, Helvetica;
+    text-align: left;
+    font-size: 2em;
+    word-break: keep-all;
+    color: black;
+    background-color: #EFEEEC;
+}
+
+
+
+::selection{
+    background-color: black;
+    color: #EFEEEC;
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+/*텍스트***********************/
+.text {
+    letter-spacing: 0.05em;
+}
+
+
+.texttitle {
+    font-size: 8rem;
+    z-index: 200;
+}
+
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+/*네비게이션********************************************/
+.wrapper-nav {
+    width: 100%;
+    margin: auto;
+    background: #EFEEEC;
+    color: black;
+
+    padding: 20px;
+    display: flex;       /*가로배열*/
+    justify-content: space-between; /*가로배열*/
+    z-index: 300;
+    position: fixed;
+}
+
+.titlelogo {
+    width: 32px;
+    margin-right: 5px;
+    margin-bottom: -7px;
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: white;
+    margin-left: 5%;
+}
+
+
+li {
+    list-style-type: none;   /* 리스트 기호 없애기*/
+
+}
+
+
+
+a {
+    text-decoration-line: none;  /*하이퍼링크 줄 없애기*/
+    display: block;
+    color: black;
+    padding: 3px 10px;  /*양 옆*/
+    line-height: 30px;  /*높이*/
+}
+
+a:hover {
+    border: solid 1px black;
+}
+
+
+.menu {
+    letter-spacing: 1.2px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    margin-right: 35%;
+}
+/*네비게이션****************************************************/
+
+
+
+
+/*해더********************/
+#mute-btn1 {
+    color: black;
+    position: fixed;
+    padding: 16px;
+    left: 0;
+    top: 0px;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+#mute-btn2 {
+    color: black;
+    position: fixed;
+    padding: 16px;
+    left: 300px;
+    top: 0px;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+
+/*이미지********************/
+
+.mainimg {
+    width: 100%;
+    height: auto;
+}
+
+.img_left {
+    width: 105%;
+    margin-right: 1400%;
+    height: auto;
+}
+
+
+.img_lapage {
+    width: 105%;
+    height: auto;
+}
+
+
+
+
+
+/*마우스 오버*/
+#mute-btn1:hover {
+    color: white;
+}
+
+
+#mute-btn2:hover {
+    color: white;
+}
+
+
+
+
+
+
+/*글자 마진값 초기화*/
+h1, p { margin: 0; }
+
+
+
+
+/*컨테이너*/
+.container {
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+
+/*미디어쿼리 했을 때의 마진값인가?*/
+.item {
+    padding: 5%;
+}
+
+
+/*규격*/
+
+
+.item.item-a {
+    background-color: #EFEEEC;
+    border: 1px solid black;
+    border-left: none;
+    height: 770px;
+    overflow: auto;
+}
+
+.item-right.item-b {
+    background-color: #EFEEEC;
+    border-bottom: 1px solid black;
+    height: 770px;
+    overflow: auto;
+}
+
+.item.item-c {
+    background-color: #EFEEEC;
+}
+
+.item.item-footer {
+    background-color: #EFEEEC;
+    border: 1px solid black;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 600px) {
+    .container {
+        font-size: 0; 
+    }
+    .item {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1rem;
+        padding: 2%;
+        margin-top: 100px;
+    }
+
+    .item-right {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1rem;
+        padding: 0%;
+        margin-top: 100px;
+    }
+    
+    .item-a {
+        width: 50%;
+    }
+    .item-b {
+        width: 50%;
+    }
+
+    .item-c {
+        width: 100%;
+    }
+
+    .item-footer {
+        width: 100%;
+    }
+}
+
+
+
+
+/***토글*************************/
+.document{
+    cursor: pointer;
+    width: 100px;
+    padding: 15px;
+    padding-bottom:15px;
+    width: 100%;
+    border: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    }
+    
+    .document:hover{
+    color: #EFEEEC;
+    background-color: black;
+    }
+    
+    .document[open] {
+    color: black;
+    background-color: #EFEEEC;
+    }
+    
+    
+    
+    
+    
+    .document summary::-webkit-details-marker {
+    display:none;
+    }
+    
+    .document summary{
+    display: block;
+    padding-left: 13px;
+    font-size: 1.4rem;
+    }
+    
+    
+    .document h1{
+    border-bottom: 1px solid black;
+    width: 85%;
+    margin-top: 120px;
+    margin-bottom: 25px;
+    margin-left: 13px;
+    font-size: 2rem;
+    }
+    
+    .document h2{
+    margin-bottom: 25px;
+    font-size:15px;
+    text-align: center;
+    margin-left: 13px;
+    }
+    
+    
+    
+    .document p{
+    margin-top: 20px;
+    margin-left: 13px;
+    font-size:1.2rem;
+    width: 65%;
+    }
+    
+    
+    
+    
+    
+    .box-menu-item {
+        width: 300px;
+        height: 300px;
+        color: black;
+        background-color: transparent;
+        border-radius: 100%;
+        border: 1px solid black;
+        margin: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.9rem;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        line-height: 1.8;
+        word-wrap: break-word;
+        }
+    
+    
+    .box-menu-item:hover {
+            background: black;
+            color: white
+    }
+    
+    .box-menu-item:active :checked  {
+        background: black;
+        color: white
+    }
+    
+    
+/***토글 ************************/
+
+/*footer*************************************************/
+item item-footer
+
+
+footer{
+    flex-wrap: wrap; 
+    gap: 10px 5%;
+}
+
+
+.footertext{
+    text-align: left; 
+    font-size: 0.9em;
+}
